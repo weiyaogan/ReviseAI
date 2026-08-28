@@ -1,0 +1,8 @@
+{
+  "name": "ReviseAI Study Companion",
+  "description": "AI-powered interactive study and revision platform. Import links or upload files to generate interactive lessons, structured study notes, flashcards, and adaptive practice questions with instant grading.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

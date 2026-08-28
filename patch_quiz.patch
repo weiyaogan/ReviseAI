@@ -1,0 +1,27 @@
+--- src/components/QuizPracticeView.tsx
++++ src/components/QuizPracticeView.tsx
+@@ -40,4 +40,5 @@
+   teachingStyle?: string;
+   language?: string;
++  allowWebSearch?: boolean;
+ }
+@@ -53,4 +54,5 @@
+   onQuizCompleted,
+   teachingStyle,
+-  language
++  language,
++  allowWebSearch
+ }) => {
+@@ -194,3 +196,4 @@
+       const grade = await gradeShortAnswer(
+-        q.question, answer, q.correctAnswer as string, q.explanation
++        q.question, answer, q.correctAnswer as string, q.explanation, allowWebSearch
+       );
+@@ -420,3 +423,4 @@
+         customInstructions,
+         teachingStyle,
+-        language
++        language,
++        undefined,
++        allowWebSearch
+       );

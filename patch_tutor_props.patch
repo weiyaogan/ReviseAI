@@ -1,0 +1,25 @@
+--- src/components/LessonTutorView.tsx
++++ src/components/LessonTutorView.tsx
+@@ -46,4 +46,5 @@
+   onIncrementStudyTime?: (seconds: number) => void;
+   language?: string;
+   teachingStyle?: string;
++  allowWebSearch?: boolean;
+ }
+@@ -62,4 +63,5 @@
+   onIncrementStudyTime,
+   language,
+-  teachingStyle = 'standard'
++  teachingStyle = 'standard',
++  allowWebSearch
+ }) => {
+@@ -198,3 +200,3 @@
+     try {
+-      const res = await sendTutorChatMessage(updatedHistory, topicTitle, sources, tutorMode, undefined, language);
++      const res = await sendTutorChatMessage(updatedHistory, topicTitle, sources, tutorMode, undefined, language, allowWebSearch);
+       const assistantMsg: ChatMessage = {
+@@ -262,3 +264,3 @@
+     try {
+-      const adapted = await adaptLessonSection(currentSection, topicTitle, sources, presetInstructions[preset], language);
++      const adapted = await adaptLessonSection(currentSection, topicTitle, sources, presetInstructions[preset], language, allowWebSearch);
+       if (onUpdateSection) {
